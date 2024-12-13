@@ -79,6 +79,108 @@ Dans un moniteur on retrouve :
 ### Cour
 CM3 
 
+## 25/10/2024
+
+### Objectif de la Séance :
+- Faire le Cour CM3                                             
+- Faire le TP4 (Mc -> Monte Carlo (et non Main Character))      ✕
+- Faire des Math (Voir le Fichier Math.md)                      ✕
+### Cour
+CM3 -> 10 à 17
+
+
+# Voir Dossier Monté Carlo
+## 08/11/2024
+
+### Objectif de la Séance :
+- Faire le TP4 Exercice 3
+- Controle + Corection (durée de 2h car 40min controle + 70min correction + 10min pause)
+- Faire Cour CM4
+### Cour 
+CM4
+
+
+## 15/11/2024
+
+### Objectif de la Séance : 
+- Faire Cour CM4
+
+### Cour
+CM4 (6 - 17):
+- Executor
+  - Executor peut être exécuter soit avec des Runnable , soit avec des Callables
+
+## 22/11/2024
+
+Voir discord mp _**Mathieu**_ (class)
+et discord resumer cour dans discution FI thomas dufaud
+
+## 29/11/2024
+
+1. Executer le code distribué
+   - WorkerSocket -> Attribut: port
+   - MasterSocket -> (Avoir lancé des Worker avant)
+2. Modifier
+  - Worker pour calculer π
+    - ajouter MonterCarlo à la ligne compute soit par fonction ,soit direct dans main
+3. Est-ce que WorkerSocket peut appeler une bib externe/un autre code Mc?/un autre composant?
+
+```
+(Ms) -> ((Ws))
+          M -> (W)
+            -> (W) 
+     -> ((Ws))
+          M -> (W)
+            -> (W)
+```
+Version pour utiliser Pi.java
+```
+(Ms) -> ((Ws))
+         call Pi.java with Aw
+     -> ((Ws))
+```
+
+4. Formatage des sorties
+5. Mise en place exp   Stabilité forte et faible
+
+   | Number Worker M1/M2 | 1 /1     | 2/1      | 3 /1     | 1/10     | 2/ 10    | 3/10     | 1/100    | 2/100    | 3/100    | 1/1000   |
+   |---------------------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+   | Temps d'execution   | 504ms    | 530ms    | 564ms    | 815ms    | 1070ms   | 1700ms   | 5100ms   | 11100ms  | 14900ms  | 50000ms  |
+   | totalCount          | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 |
+
+6. Tracer scalabilité forte et faible
+
+![image](TempsCalcul.png)
+
+7. Comparer avec le code Pi.java
+
+   | Number Worker M1/M2 | 1 /1     | 2/1      | 3 /1     | 1/10     | 2/ 10    | 3/10     | 1/100    | 2/100    | 3/100    | 1/1000   |
+   |---------------------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
+   | Temps d'execution   | 655ms    | 710ms    | 724ms    | 936ms    | 1155ms   | 1653ms   |          |          |          |          |
+   | totalCount          | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 |
+
+
+<br>
+
+
+Quand on run un fichier ('on le run' |>), on crée une chaine de compilation qui:
+- génére un fichier de configuration        |argument d'entrée port 25545
+  - avec dépendence                         |
+  -> Run -> Configuration Run -> program argument
+                              -> Allow multiple intance
+- compile
+- execute
+
+## 06/12/2024
+
+On fait le Rapport
+
+On installe JAVA sur Centos pour pourvoir faire des en Mémoire distribué entre 2 ordi
+
+
+
+  
+
 
 
 
