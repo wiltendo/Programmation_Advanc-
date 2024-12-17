@@ -476,78 +476,158 @@ pour chaque nombre de Processus de maniére à avoir une valeur plus stable.
 Chaque Teste Comporte 2 Graphique le Premier Représente le Temps d'exécution en Fonction cu nombre de Processus 
 et le Deuxiéme Représente le Temps d'exécution en Fonction du Temps de Calcul avec 1 Processeur.
 
-Résultat de la Premiére Expérience Réalisé en Salle G26.
+Résultat de la Première Expérience Réalisée en Salle G26
 
-On y voit une baisse Importante du Temps de Réalisation entre les valeurs avec 8 processus et ceux avec 9 Processus 
-étant donné que l'on dépasse le nombre de Coeur disponible en Paralléle.
+Dans cette expérience, nous avons uniquement les résultats du temps d'exécution en fonction du temps de calcul avec 1 processeur.
+
+Comme on peut le voir, la courbe est descendante car :
+1. Un calcul avec une faible scalabilité signifie une augmentation du nombre de processus et du nombre de tâches à effectuer.
+2. L'expérience a été réalisée sur un seul ordinateur, donc celui-ci doit répartir les différents processus sur ses cœurs.
+
+On observe aussi une baisse importante du temps de réalisation entre les valeurs avec 8 processus et celles avec 9 processus, étant donné que l'on dépasse le nombre de cœurs disponibles en parallèle.
+
+On peut donc conclure que le temps de calcul sera de plus en plus réduit en fonction du nombre de processus, car chaque processus doit effectuer le même nombre de tâches, peu importe leur nombre. Ainsi, le temps de calcul est soit stable, soit descendant. De plus, étant donné que l'expérience a été réalisée sur un ordinateur, le temps de calcul sera forcément plus lent avec un nombre élevé de processus, car cela demande de plus en plus d'espace, ce qui diminue les performances.
 
 ![image](ImageMesure/Résultat_Ex1_G26.png)
 
-Résultat de la Deuxiéme Expérience Réalisé en Salle G26.
+Résultat de la Deuxième Expérience Réalisée en Salle G26
+
+Comme on peut le voir, la courbe est croissante car :
+1. Un calcul avec une forte scalabilité signifie une augmentation du nombre de processus, mais avec un même nombre de points à calculer.
+
+On observe aussi une baisse importante du temps de réalisation entre les valeurs avec 8 processus et celles avec 9 processus, étant donné que l'on dépasse le nombre de cœurs disponibles en parallèle.
+
+On peut donc conclure que le temps de calcul sera de plus en plus rapide, car à chaque augmentation du nombre de processus, on permet de répartir équitablement le nombre de points entre eux.
 
 ![image](ImageMesure/Résultat_Ex2_G26.png)
 
 Résultat de la Premiére Expérience Réalisé sur mon Ordinateur Personelle.
+
+Comme on peut le voir, le temps d'exécution diminue de plus en plus, ce qui indique un gain de temps et une forte scalabilité.
+
+Certains points semblent étranges dans ces graphiques, mais cela est dû au faible nombre de points.  
+On note également que, dans le deuxième graphique, la courbe de **speedup** suit bien l'optimale (valeur recherchée) jusqu'à 9 processus avant de commencer à se stabiliser.
+
 
 ![image](ImageMesure/Figure_1_Ex1Fo.png)
 ![image](ImageMesure/Figure_2_Ex1Fo.png)
 
 Résultat de la Deuxiéme Expérience Réalisé sur mon Ordinateur Personelle.
 
+Comme dans l'expérience précédente, le temps d'exécution diminue de plus en plus, confirmant une forte scalabilité.
+
+Contrairement aux résultats précédents, la courbe est beaucoup moins altérée et plus stable. On note seulement une légère augmentation des résultats avec 13 processus.  
+On observe également que, dans le deuxième graphique, la courbe de **speedup** suit bien l'optimale jusqu'à 6 processus avant de s'en écarter pour se stabiliser aux environs de 10 processus.
+
+
 ![image](ImageMesure/Figure_1_Ex2Fo.png)
 ![image](ImageMesure/Figure_2_Ex2Fo.png)
 
 Résultat de la Troisiéme Expérience Réalisé sur mon Ordinateur Personelle.
+
+Comme dans l'expérience précédente, le temps d'exécution diminue, ce qui indique une forte scalabilité.
+
+Les résultats sont similaires à ceux de l'expérience précédente. Une seule différence notable est observée dans le deuxième graphique : une diminution du **speedup** au niveau des 11 processus.
 
 ![image](ImageMesure/Figure_1_Ex3Fo.png)
 ![image](ImageMesure/Figure_2_Ex3Fo.png)
 
 Résultat de la Quatriéme Expérience Réalisé sur mon Ordinateur Personelle.
 
+Comme on peut le voir, le temps d'exécution augmente de plus en plus, ce qui signifie une perte de temps et indique une faible scalabilité.
+
+Certains points semblent étranges dans ces graphiques, mais cela est dû au faible nombre de points.  
+On note également que, dans le deuxième graphique, la courbe de **speedup** suit bien l'optimale jusqu'à 11 processus avant de commencer à diminuer.
+
+
 ![image](ImageMesure/Figure_1_Ex1Fa.png)
 ![image](ImageMesure/Figure_2_Ex1Fa.png)
 
 Résultat de la Cinquiéme Expérience Réalisé sur mon Ordinateur Personelle.
+
+Comme on peut le voir, le temps d'exécution est de plus en plus grand, ce qui signifie une perte de temps et indique une scalabilité faible.
+
+Contrairement aux résultats précédents, la courbe est beaucoup moins altérée et beaucoup plus stable.
+
+On peut aussi noter que dans le deuxième graphique, la courbe de **speedup** ne suit quasiment pas la courbe optimale : elle ne fait que diminuer.
+
 
 ![image](ImageMesure/Figure_1_Ex2Fa.png)
 ![image](ImageMesure/Figure_2_Ex2Fa.png)
 
 Résultat de la Sixiéme Expérience Réalisé sur mon Ordinateur Personelle.
 
+Comme on peut le voir, le temps d'exécution est de plus en plus grand, ce qui signifie une perte de temps et indique une scalabilité faible.
+
+Les résultats sont similaires à ceux de l'expérience précédente.
+
 ![image](ImageMesure/Figure_1_Ex3Fa.png)
 ![image](ImageMesure/Figure_2_Ex3Fa.png)
 
 Résultat de la Septiéme Expérience Réalisé sur mon Ordinateur Personelle.
+
+Comme on peut le voir, le temps d'exécution est de plus en plus petit, ce qui signifie un gain de temps et indique une scalabilité forte.
+
+Certains points semblent étranges dans ces graphiques, mais cela est seulement dû au faible nombre de points.
+
+Contrairement aux résultats avec la fonction **Pi**, **Assignment102** semble donner des résultats beaucoup plus élevés et plus variés.  
+On observe aussi que, dans le deuxième graphique, le calcul du **speedup** est très bas : il ne dépasse jamais un gain de vitesse de 3, quel que soit le nombre de processus.
 
 ![image](ImageMesure/Figure_1_Ex4Fo.png)
 ![image](ImageMesure/Figure_2_Ex4Fo.png)
 
 Résultat de la Huitiéme Expérience Réalisé sur mon Ordinateur Personelle.
 
+Comme dans la précédente expérience, les résultats sont variés et instables. Le **speedup** augmente très peu, voire diminue.
+
+
 ![image](ImageMesure/Figure_1_Ex5Fo.png)
 ![image](ImageMesure/Figure_2_Ex5Fo.png)
 
 Résultat de la Neuviéme Expérience Réalisé sur mon Ordinateur Personelle.
+
+Comme dans la précédente expérience, les résultats sont variés et instables. Le **speedup** augmente très peu, voire diminue.
+
 
 ![image](ImageMesure/Figure_1_Ex6Fo.png)
 ![image](ImageMesure/Figure_2_Ex6Fo.png)
 
 Résultat de la Dixiéme Expérience Réalisé sur mon Ordinateur Personelle.
 
+Comme on peut le voir, le temps d'exécution est de plus en plus grand, ce qui signifie une perte de temps et indique une scalabilité faible.
+
+Le temps de calcul est très élevé, contrairement aux résultats obtenus avec la fonction **Pi**. De plus, le calcul du **speedup** ne fait que diminuer de plus en plus rapidement.
+
 ![image](ImageMesure/Figure_1_Ex4Fa.png)
 ![image](ImageMesure/Figure_2_Ex4Fa.png)
 
 Résultat de la Onziéme Expérience Réalisé sur mon Ordinateur Personelle.
+
+Comme on peut le voir, le temps d'exécution est de plus en plus grand, ce qui signifie une perte de temps et indique une scalabilité faible.
+
+Les résultats sont les mêmes que ceux de l'expérience précédente.
 
 ![image](ImageMesure/Figure_1_Ex5Fa.png)
 ![image](ImageMesure/Figure_2_Ex5Fa.png)
 
 Résultat de la Douziéme Expérience Réalisé sur mon Ordinateur Personelle.
 
+Comme on peut le voir, le temps d'exécution est de plus en plus grand, ce qui signifie une perte de temps et indique une scalabilité faible.
+
+Les résultats sont similaires à ceux de l'expérience précédente.
+
 ![image](ImageMesure/Figure_1_Ex6Fa.png)
 ![image](ImageMesure/Figure_2_Ex6Fa.png)
 
+### Conclusion
 
+Les résultats obtenus en utilisant la fonction **Pi** sont plus proches de l'optimale que ceux obtenus avec la fonction **Assignment102**.
+
+De plus, les résultats avec la fonction **Pi** sont significativement plus petits que ceux issus de **Assignment102** (environ 10 fois plus rapides).
+
+Ainsi, on peut conclure que la fonction **Pi** est nettement plus performante pour les calculs, contrairement à la fonction **Assignment102**.
+
+Il est donc plus pertinent et intéressant de continuer avec la fonction **Pi** plutôt qu'avec **Assignment102**.
 
 ## V/Mise en Oeuvre en mémoire distribuer
 
@@ -653,33 +733,76 @@ Le WorkerSocket peut interagir avec des bibliothèques externes ou d’autres co
 
 
 ## VI/ Perf Master Worker distribuer
-5. Mise en place exp   Stabilité forte et faible
+
+### Calcule de Performance de MasterSocker et WorkerSocket
 
    | Number Worker M1/M2 | 1 /1     | 2/1      | 3 /1     | 1/10     | 2/ 10    | 3/10     | 1/100    | 2/100    | 3/100    | 1/1000   |
    |---------------------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
    | Temps d'execution   | 504ms    | 530ms    | 564ms    | 815ms    | 1070ms   | 1700ms   | 5100ms   | 11100ms  | 14900ms  | 50000ms  |
    | totalCount          | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 |
 
-6. Tracer scalabilité forte et faible
 
 ![image](TempsCalcul.png)
 
-7. Comparer avec le code Pi.java
+| Machines | Points totaux | Points / Worker | Nb Processeurs | Temps |
+|----------|---------------|-----------------|----------------|-------|
+| 1        | 192000000     | 192000000       | 1              | 5873  |
+| 1        | 192000000     | 96000000        | 2              | Nc    |
+| 1        | 192000000     | 64000000        | 3              | Nc    |
+| 1        | 192000000     | 48000000        | 4              | 1506  |
+| 2        | 192000000     | 24000000        | 8              | 756   |
+| 3        | 192000000     | 16000000        | 12             | 508   |
+| 4        | 192000000     | 12000000        | 16             | 385   |
+| 6        | 192000000     | 8000000         | 24             | 267   |
+| 8        | 192000000     | 9000000         | 32             | 206   |
+| 12       | 192000000     | 4000000         | 48             | 133   |
 
-   | Number Worker M1/M2 | 1 /1     | 2/1      | 3 /1     | 1/10     | 2/ 10    | 3/10     | 1/100    | 2/100    | 3/100    | 1/1000   |
-    |---------------------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-   | Temps d'execution   | 655ms    | 710ms    | 724ms    | 936ms    | 1155ms   | 1653ms   |          |          |          |          |
-   | totalCount          | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 | 16000000 |
+![image](ImageMesure/scalabilite_forte_MW_sur_machine_192000000.png)
 
 
-<br>
+### Calcul de Scalabilité forte de MasterSocker et WorkerSocket avec plusieurs Ordinateurs
 
+Comme on peut le voir la courbe de Speedup en fonction du nombre de processeur est trés proche de celle optimale (valeur rechercher)
 
-Quand on run un fichier ('on le run' |>), on crée une chaine de compilation qui:
-- génére un fichier de configuration        |argument d'entrée port 25545
-    - avec dépendence                         |
-      -> Run -> Configuration Run -> program argument
-      -> Allow multiple intance
-- compile
-- execute
+Elle est beaucoup plus performant dans ces Calculs que la Fonction Pi réaliser sur un seul ordinateur
+
+| Machines | Points totaux | Points / Worker | Nb Processeurs | Temps |
+|----------|---------------|-----------------|----------------|-------|
+| 1        | 4000000       | 4000000         | 1              | 129   |
+| 1        | 8000000       | 4000000         | 2              | Nc    |
+| 1        | 12000000      | 4000000         | 3              | Nc    |
+| 1        | 16000000      | 4000000         | 4              | 140   |
+| 2        | 32000000      | 4000000         | 8              | 143   |
+| 3        | 48000000      | 4000000         | 12             | 136   |
+| 4        | 64000000      | 4000000         | 16             | 134   |
+| 6        | 96000000      | 4000000         | 24             | 139   |
+| 8        | 128000000     | 4000000         | 32             | 140   |
+| 12       | 192000000     | 4000000         | 48             | 141   |
+
+![image](ImageMesure/scalabilite_faible_MW_sur_machine_4000000.png)
+
+Comme on peut le voir la courbe de Speedup en fonction du nombre de processeur est trés proche de celle optimale (valeur rechercher)
+
+Elle est beaucoup plus performant dans ces Calculs que la Fonction Pi réaliser sur un seul ordinateur
+
+### Calcul de Scalabilité forte de MasterSocker et WorkerSocket avec plusieurs Ordinateurs
+
+Comme on peut le voir sur les Résultats du Temps d'éxécution, Les résultats sont beaucoup plus proche de l'objectif 
+d'optimisation que les Résultats obtenir pour Pi avec Un seul ordinateur. On peut donc Conclure que Calcul distribué est Beaucoup plus performant que le Calcul avec un Ordinateur.
+
+| Machines Total | Machines Master | Machines Worker | Points totaux | Points / Master | Points / Worker | Nb Processeurs | Temps |
+|----------------|-----------------|-----------------|---------------|-----------------|-----------------|----------------|-------|
+| 16             | 4               | 16              | 192000000     | 48000000        | 12000000        | 16             | 106   |
+| 32             | 8               | 32              | 192000000     | 24000000        | 6000000         | 32             | 60    |
+| 48             | 12              | 48              | 192000000     | 16000000        | 4000000         | 48             | 44    |
+
+### Calcul de Scalabilité faible de MasterSocker et WorkerSocket avec plusieurs Ordinateurs
+
+Ancun Résultat n'est entré dans ces Expériences car aussi test n'a été effectuer
+
+| Machines Total | Machines Master | Machines Worker | Points totaux | Points / Master | Points / Worker | Nb Processeurs | Temps |
+|----------------|-----------------|-----------------|---------------|-----------------|-----------------|----------------|-------|
+| 16             | 4               | 16              | 64000000      | 16000000        | 4000000         | 16             | Nc    |
+| 32             | 8               | 32              | 128000000     | 16000000        | 4000000         | 32             | Nc    |
+| 48             | 12              | 48              | 192000000     | 16000000        | 4000000         | 48             | Nc    |
 
