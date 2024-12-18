@@ -619,6 +619,34 @@ Les résultats sont similaires à ceux de l'expérience précédente.
 ![image](ImageMesure/Figure_1_Ex6Fa.png)
 ![image](ImageMesure/Figure_2_Ex6Fa.png)
 
+### Performance Efficiency
+
+Maintenant que nous avons comparer les différents résultats des 2 fonctions, nous pouvons maintenant nous consentrer sur leur efficacité
+
+Pour ce faite nous allons comparer leur marge d'erreur dans leur resultat de Pi par rapport au résultat Réel de Pi
+
+Commmencons par la **_Scalabilité Faible_**, dans le premier graphique nous pouvons voir les Résultats de **Assignement102** et dans le deuxiéme ceux de **Pi**.
+
+![image](ImageMesure/Err_AssFaible.png) 
+![image](ImageMesure/Err_PiFaible.png)
+
+Comme on peut le voir la courbe de **Pi** est plus stable et à beaucoup moins de variété Comparer à celle de **Assignement102** qui est instable et varié dans ces résultats.
+
+On peut aussi noté que le premier point de Pi commence à une erreur de 2.8E-4 alors que Assignement102 commence à 3.2E-4, dans le même cas la median de la courbe de Pi est à 6E-5 alors que Assignement102 est à 8E-5.
+
+On peut donc en conclure que pour la Scalabilité Faible, il est préférable d'utiliser Pi avec le quel on obtient des résultats plus stable et précis plutot Assignement102 qui lui à des résultat trés variables et imprécis.
+
+Parlons Maintenant de la Scalabilité Fort, dans le premier graphique nous pouvons voir les Résultats de **Assignement102** et dans le deuxiéme ceux de **Pi**.
+
+![image](ImageMesure/Err_AssFort.png) 
+![image](ImageMesure/Err_PiFort.png)
+
+Comme on peut le voir dans le graphique 1, la courbe de Assignement102 est plus stable mais à certaine valeur élever dans ces résultats, dans le graphique 2, la courbe de Pi est plus instable dans ces résultats mais à une dispertion moins élever.
+
+On peut aussi noté que dans les deux graphiques la médian est à environ 1.7E-4, à la différence que dans Pi les Résultats reste entre 2.5E-4 et 1E-4 alors que dans Assignment102 les résultats sont entre 6.4E-4 et 0.1E-4. On a donc des résultats plus varié dans Assignment102 que dans Pi mais ce sont des résultats plus éloigné et qui on la même median que ceux obtenu grace à Pi.
+
+On peut donc en Conclure que pour la Scalabilité Fort, il est préférable d'utiliser Pi avec le quel on obtient des résultats plus instable mais moins dispercé plutot que Addignment102 qui à des Résultats plus stable mais plus éloigner.
+
 ### Conclusion
 
 Les résultats obtenus en utilisant la fonction **Pi** sont plus proches de l'optimale que ceux obtenus avec la fonction **Assignment102**.
