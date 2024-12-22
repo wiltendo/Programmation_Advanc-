@@ -653,11 +653,17 @@ Les résultats sont similaires à ceux de l'expérience précédente.
 
 ### Performance Efficiency
 
-Maintenant que nous avons comparer les différents résultats des 2 fonctions, nous pouvons maintenant nous consentrer sur leur efficacité
+Dans cette analyse, nous comparons deux fonctions, **Pi** et **Assignement102**, en examinant leur efficacité. Notre objectif est de mesurer la marge d’erreur de leurs résultats par rapport à la valeur réelle de Pi. Nous utilisons également des normes comme **ISO/IEC 25010** pour évaluer la qualité des performances, en prenant en compte la précision, la stabilité et la robustesse des résultats.
 
-Pour ce faite nous allons comparer leur marge d'erreur dans leur resultat de Pi par rapport au résultat Réel de Pi
+L’efficacité est une composante essentielle de la qualité. Nous la retrouvons dans deux dimensions importantes :
 
-Commmencons par la **_Scalabilité Faible_**, dans le premier graphique nous pouvons voir les Résultats de **Assignement102** et dans le deuxiéme ceux de **Pi**.
+- **La qualité d’utilisation**, évaluant la précision et la constance des résultats dans différents scénarios.
+- **La qualité du produit**, se concentrant sur la conformité aux normes établies et la stabilité des performances.
+
+Dans le scénario de **scalabilité faible**, deux graphiques illustrent les résultats :
+
+- Le premier graphique montre les résultats de **Assignement102**.
+- Le second graphique présente ceux de **Pi**.
 
 ![image](ImageMesure/Err_AssFaible.png) 
 ![image](ImageMesure/Err_PiFaible.png)
@@ -677,7 +683,16 @@ Comme on peut le voir dans le graphique 1, la courbe de Assignement102 est plus 
 
 On peut aussi noté que dans les deux graphiques la médian est à environ 1.7E-4, à la différence que dans Pi les Résultats reste entre 2.5E-4 et 1E-4 alors que dans Assignment102 les résultats sont entre 6.4E-4 et 0.1E-4. On a donc des résultats plus varié dans Assignment102 que dans Pi mais ce sont des résultats plus éloigné et qui on la même median que ceux obtenu grace à Pi.
 
-On peut donc en Conclure que pour la Scalabilité Fort, il est préférable d'utiliser Pi avec le quel on obtient des résultats plus instable mais moins dispercé plutot que Addignment102 qui à des Résultats plus stable mais plus éloigner.
+
+Pour Information, les normes jouent un rôle essentiel pour garantir une évaluation rigoureuse :
+
+- Précision : Pi satisfait aux exigences grâce à des marges d’erreur réduites.
+- Stabilité : La courbe de Pi est plus stable dans le scénario de scalabilité faible, favorisant une meilleure qualité d’utilisation.
+- Robustesse : En scalabilité forte, Pi présente une dispersion moindre, respectant les critères de qualité du produit.
+
+En combinant les observations des deux scénarios et en s’appuyant sur les normes de qualité, la fonction Pi surpasse Assignement102. Elle garantit des résultats plus précis, stables et robustes, répondant ainsi aux exigences de qualité d’utilisation et de qualité du produit.
+
+Nous recommandons donc l’utilisation de Pi dans les deux contextes pour maximiser l’efficacité des calculs liés à Pi.
 
 ### Conclusion
 
