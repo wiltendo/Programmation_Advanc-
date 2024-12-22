@@ -1,6 +1,38 @@
 # Rapport Programmation Advancé
 
-## 1/Introduction
+## Sommaire
+
+#### [I/Introduction](#p1)
+#### [II/TP1](#p2)
+- [a) Objectif](#p2a)
+- [b) Classe](#p2b)
+- [c) Information](#p2c)
+- [d) Representation](#p2d)
+#### [III/TP2](#p3)
+- [a) Objectif](#p3a)
+- [b) Classe](#p3b)
+- [c) Information](#p3c)
+- [d) Representation](#p3d)
+#### [IV/TP3](#p4)
+- [a) Objectif](#p4a)
+- [b) Classe](#p4b)
+- [c) Information](#p4c)
+#### [V/TP3 Version BlockingQueue](#p5)
+- [a) Objectif](#p5a)
+- [b) Classe](#p5b)
+#### [VI/Monté Carlo et Parralélisation](#p6)
+- [a) Monté Carlo](#p6a)
+- [b) Parallélisation](#p6b)
+- [c) Mise en oeuvre sur des Machines à Mémoire Partagé](#p6c)
+  - [A) Assignement102](#p6cA)
+  - [B) Pi.java](#p6cB)
+- [d) Qualité et test de perf](#p6d)
+- [e) Mise en Oeuvre en mémoire distribuer](#p6e)
+- [f) Perf Master Worker distribuer](#p6f)
+
+
+
+## <a name="p1"></a> 1/Introduction 
 
 L’objectif de cette matière est d’approfondir notre connaissance sur 
 l’environnement de développement pour cela, nous devions réaliser différents TP 
@@ -21,9 +53,9 @@ performances qu’avait chaque Pc.
 | Fichier de pagination | Oui                                             | Oui                                             | Oui                                                      |
 | Fichier d'échange     | Oui                                             | Oui                                             | Oui                                                      |
 
-## 2/TP1
+## <a name="p2"></a> 2/TP1
 
-### 2.1/Objectif
+### <a name="p2a"></a> 2.1/Objectif
 
 L’objectif de ce TP est d’afficher une Fenêtre où on peut retrouver un Mobile (sous la forme d’un carré) se déplacent de la gauche de la fenêtre jusqu'à la droite de la fenêtre.
 
@@ -31,7 +63,7 @@ Il fallait aussi permettre aux Mobile de faire un aller- retour (après avoir at
 
 Il fallait aussi ajouter un Bouton permettant d’arrêté le Mobile ou de lui permettre de continuer lors qu’on appuyait dessus.
 
-### 2.2/Classe
+### <a name="p2b"></a> 2.2/Classe
 
 ![image](Tp1_Shema.png)
 
@@ -68,22 +100,22 @@ On y retrouve 3 fonction :
 - paintComponent() : fontion permet de changer de couleur le Mobile
 
 
-### 2.3/Information
+### <a name="p2c"></a> 2.3/Information
 
 **Tread** : permet d'effectuer plusieurs action / programme en même temps.<br>
 **Ressource critique** : Ressource utiliser que par 1 processus à la fois. Ex: Zone Mémoire, imprimante <br>
 **Section critique** : Portion de code n'executant que 1 thread. (Mais plusisuer thread cherche à y asséder)<br>
 **Verrou MUTEX** : verrou permettant de bloquer un thread durant une Exclusion Mutuelle<br>
 
-### 2.4/Representation
+### <a name="p2d"></a> 2.4/Representation
 Voici une representation de la version Final du TP
 
 ![image](Tp1_Representation.png)
 
 
-## 3/TP2
+## <a name="p3"></a> 3/TP2
 
-### 3.1/Objectif
+### <a name="p3a"></a> 3.1/Objectif
 
 L’objectif de ce TP est d’apprendre et tester ce qu’est la section critique.
 
@@ -93,7 +125,7 @@ Par exemple Une première tache devait afficher AAA et une deuxième devait affi
 
 Nous devions après réaliser ce travail en utilisant des Sémaphores (pour notre cas nous n’utilisions qu’une version Binaire du Sémaphore)
 
-### 3.2/Classe
+### <a name="p3b"></a> 3.2/Classe
 
 Dans ce TP on retrouve :
 - 4 classes
@@ -117,14 +149,14 @@ On y retrouve 2 fonction :
   - Il a besoin de 1 valeur valeurInitiale, il est de type int et il permet d'envoyer un numero indicant à Cempahore le nombre de personne pouvant sirculer 
 - syncSignal() : fonction servant à envoyer un signal signifiant que l'acces est disponible
 
-### 3.3/Information
+### <a name="p3c"></a> 3.3/Information
 
 à la maniére d'un sémaphore on bloque l'accée pour que 1 thread passe à la fois<br>
 **Wait()** = stop l'accée à la ressource<br>
 **Signal()** = donne l'information que la ressource est libérrer<br>
 
 
-### 3.4/Representation
+### <a name="p3d"></a> 3.4/Representation
 
 Comme on peut voir dans cet extrait de code 7 Tread sont lancé en même temps avec différentes valeur à afficher
 
@@ -136,13 +168,13 @@ Comme on peut le voir en Sortie Même si les 7 Traed sont lancé en même temps 
 ![image](Tp2_Sortie.png)
 
 
-## 4/TP3
+## <a name="p4"></a> 4/TP3
 
-### 4.1/Objectif
+### <a name="p4a"></a> 4.1/Objectif
 
 L’objectif de ce TP était de simuler une boite aux lettre où des Producteur écrivait une lettre puis la déposait et un consommateur devait récupérer la lettre et la lire.
 
-### 4.2/Classe
+### <a name="p4b"></a> 4.2/Classe
 
 ![image](Bal_graph.png)
 
@@ -182,7 +214,7 @@ On y retrouve 2 fonction :
 - Producteur() : fonction constructeur permettant d'initialiser les différents attibut de la classe
 - run() : fonction servant à deposer une lettre dans boite aux lettre (Element bal)
 
-### 4.3/Information
+### <a name="p4c"></a> 4.3/Information
 
 Les differents modules cherche à avancer mais il sont bloquer par le Cemaphore ,
 Il est possible que un module ne puisse pas avancer durant un long momment car le cemaphore ne lui lesse pas l'acces
@@ -196,13 +228,13 @@ Dans un moniteur on retrouve :
 - Une méthode write
 - Une méthode read
 
-## 5/TP3 Version BlockingQueue
+## <a name="p5"></a> 5/TP3 Version BlockingQueue
 
-### 5.1/Objectif
+### <a name="p5a"></a> 5.1/Objectif
 
 L’objectif de ce TP est de refaire le TP3 mais dans une Version BlockingQueue
 
-### 5.2/Classe
+### <a name="p5b"></a> 5.2/Classe
 
 ![image](Tp3_VB_Normal.png)
 
@@ -246,7 +278,7 @@ Dans cette version on ajoute aux pain une varaible Pain_Empoisonné pour ~~tuer~
 
 La classe Boulangerie ajoute une fonction deposePainEmpoisonne() pour commencer l'étermination
 
-## 6/Monté Carlo et Parralélisation
+## <a name="p6"></a> 6/Monté Carlo et Parralélisation
 
 Pour Réaliser Le Tp4, nous avons utiliser la Caluler Pi avec la Méthode de Monté Carlo
 En le fesant avec une architecture à mémoire Partagé.
@@ -256,7 +288,7 @@ un nombre N de Worker pour que chaque Worker puisse calculer en Paralléle et en
 
 Pour cela 2 code nous avait été fourni Assignment102 et Pi, tous les 2 crée dans le langage java.
 
-### I/Monté Carlo
+### <a name="p6a"></a> I/Monté Carlo
 
 Pour ce Tp nous avons utilisé Monté Carlo pour calculer π (Pi)
 
@@ -296,7 +328,7 @@ for (p=0;p<nt;p++){
 }
 ```
 
-### II/Parallélisation 
+### <a name="p6b"></a> II/Parallélisation 
 
 Pour Paralléliser une Méthode, il faut commencer par Identifier les Taches qui sont Réaliser.
 
@@ -348,9 +380,9 @@ function Worker(nt,nc){
 }
 ```
 
-### III/ Mise en oeuvre sur des Machines à Mémoire Partagé
+### <a name="p6c"></a> III/ Mise en oeuvre sur des Machines à Mémoire Partagé
 
-### A/ Assignement 102
+### <a name="p6cA"></a> A/ Assignement 102
 
 Modéle de Programmation parallèle : Tache
 
@@ -386,7 +418,7 @@ Fin Procédure
     
 ```
 
-### B/ Pi.java
+### <a name="p6cB"></a> B/ Pi.java
 
 Modéle de Programmation parallèle : Tache
 
@@ -437,7 +469,7 @@ Fin Procédure
     
 ```
 
-## IV/Qualité et test de perf
+## <a name="p6d"></a> IV/Qualité et test de perf
 
 Les Test ont été Réaliser sur 2 ordinateurs différents. Le Premier ce trouve à l'Iut de Velizy dans la Salle G26 dans la Zone de Devant auquel on peut trouver 4 Coeur.
 Le Deuxiéme est Mon ordinateur Personnel, il comporte 6 Coeur.
@@ -657,7 +689,7 @@ Ainsi, on peut conclure que la fonction **Pi** est nettement plus performante po
 
 Il est donc plus pertinent et intéressant de continuer avec la fonction **Pi** plutôt qu'avec **Assignment102**.
 
-## V/Mise en Oeuvre en mémoire distribuer
+## <a name="p6e"></a> V/Mise en Oeuvre en mémoire distribuer
 
 ### 1. Exécution du Code Distribué
 ### Configuration des composants :
@@ -760,7 +792,7 @@ Le WorkerSocket peut interagir avec des bibliothèques externes ou d’autres co
   - Les données peuvent être transmises par sockets ou par des API REST si le projet est adapté.
 
 
-## VI/ Perf Master Worker distribuer
+## <a name="p6f"></a> VI/ Perf Master Worker distribuer
 
 ### Calcule de Performance de MasterSocker et WorkerSocket
 
